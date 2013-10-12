@@ -1,0 +1,42 @@
+/**layout begin**/
+.pos-r{
+	position:relative;
+}
+.pos-a{
+	position:absolute;
+}
+/**layout end**/
+/**margin begin**/
+.mt5{
+	margin-top:5px;
+}
+.mb5{
+	margin-top:5px;
+}
+.mv5{
+	margin:5px 0 5px 0;
+}
+.pt5{
+	padding-top:5px;
+}
+.pb5{
+	padding-bottom:5px;
+}
+.pv5{
+	padding:5px 0 5px 0;
+}
+/**margin end**/
+
+/**width begin**/
+.w400{
+	width:400px;
+}
+/**width end**/
+
+
+
+pre{
+	background: #198415;
+	color:#ddd;
+	border-radius:4px;
+}
