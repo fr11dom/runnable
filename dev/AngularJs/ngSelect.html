@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="demo">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../../base/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../base/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../base/css/prettify.css">
+	<title>ngClass-Angularjs</title>
+</head>
+<body onload="prettyPrint()">
+	<div class="container" ng-controller="PageCtrl">
+		<select ng-model="idArr" ng-options="t.id as t.txt for t in type" >
+		</select>
+		<ss></ss>
+
+	</div>
+	<script type="text/javascript" src="../../base/js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="../../base/js/lib/prettify.js"></script>
+	<script type="text/javascript">
+	var demo = angular.module('demo', []);
+		
+	function PageCtrl($scope){
+		$scope.type = [
+			{id:1, txt: '都是数值'},
+			{id:3, txt: '都是数值1'},
+			{id:3, txt: '都是数值2'}
+		];
+		$scope.type.unshift({id: '', txt: '请选择'});
+		$scope.idArr = [];
+		$scope.a = function(id){
+
+		}
+	}
+	demo.directive('ss', function($scope) {
+	 	return {
+	        restrict: 'E',
+	        template: 'dfdfdf',
+	        replace: true,
+	        link : function(scope, element, attrs) {
+	        	element.change(function(){
+
+	        	});
+       		}
+	    };
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html ng-app>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../../base/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../base/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../base/css/prettify.css">
+	<title>ngClass-Angularjs</title>
+</head>
+<body onload="prettyPrint()">
+	<div class="container">
+		<h1>ngClass</h1>
+		<ul>
+			<li>
+				<strong>作用：</strong>
+				<span>动态添加CSS类名。</span>
+			</li>
+			<li>
+				<strong>用法：</strong>
+				<span>1、作为属性(attribute);2、作为类名(class)。</span>
+			</li>
+		</ul>
+
+		<div class="mt5">
+			<!--属性例子开始-->
+			<p class="mt5">作为属性：&lt;any ng-class="{expression}"&gt;…… &lt;any&gt;</p>
+
+			<!--例1 开始-->
+			<div class="demo">
+				<div class="thum">例1：映射语法(Map) ng-class="{class: expression}"</div>
+				<div class="code w600">
+					<input ng-model="expression" type="checkbox"/>
+					<span ng-class="{red: expression}">√上checkbox看变化</span>
+					<span ng-controller="Demo1Ctrl" ng-class="{red: color == true}">红色的</span>
+					<span ng-controller="Demo1Ctrl" ng-class="{blue: style}">蓝色的</span>
+					<span ng-controller="Demo1Ctrl" ng-class="{ blue: {{style}} }">蓝色的</span>
+					<span ng-controller="Demo1Ctrl" ng-class="style2">删除线</span>
+					<span ng-repeat="item in [red]" ng-class="{red: item == red}">红色的</span>
+					<span ng-controller="Demo1Ctrl" ><span ng-repeat="item in data" ng-class="{{item}}">红色的</span></span>
+				</div>
+				<h4>源码：</h4>
+<pre class="w600 mt5 prettyprint linenums">
+"HTML:"
+&lt;input ng-model="expression" type="checkbox"/&gt;
+&lt;span ng-class="{red: expression}">√上checkbox看变化&lt;/span>
+&lt;span ng-controller="Demo1Ctrl" ng-class="{red: color == true}">红色的&lt;/span>
+&lt;span ng-controller="Demo1Ctrl" ng-class="{blue: style}">蓝色的&lt;/span>
+&lt;span ng-controller="Demo1Ctrl" ng-class="{ blue: {&nbsp;{style}} }">蓝色的&lt;/span>
+&lt;span ng-controller="Demo1Ctrl" ng-class="style2">删除线&lt;/span>
+&lt;span ng-repeat="item in [red]" ng-class="{red: item == red}">红色的&lt;/span>
+&lt;span ng-controller="Demo1Ctrl" >
+    &lt;span ng-repeat="item in data" ng-class="{&nbsp;{item}}">红色的&lt;/span>
+&lt;/span>
+"JS:"
+function Demo1Ctrl($scope){
+    $scope.color = true;
+    $scope.style = true;
+    $scope.style2 = {strike: true};
+    $scope.data = [{red: true}];
+}
+</pre>
+				<h4 class="red">注意：</h4>
+				<div class="code w600">
+					<p>在一个<strong class="red">指令中</strong>调用其scope里的值,'{&nbsp;{}&nbsp;}'是可选的。</p>
+					<p>比如: ng-class="{blue: style}"写成ng-class="{ blue: {&nbsp;{style}} }也是正确的"</p>
+					<p>在一个标签上调用其指令ng-repeat里的key,直接用key即可，用{key}或者{&nbsp;{key}}都是有问题的</p>
+					<!-- <p>比如: ng-repeat="item in [red]" ng-class="{red: item == red}"  </p> -->
+				</div>
+			</div>		
+			<!--例1 结束-->
+
+			<!--例2 开始-->
+			<div class="demo">
+				<div class="thum">例2：映射语法(Map) ng-class="{class: expression,class2: expression2}"</div>
+				<div class="code w600">
+					<input ng-model="expression1" type="checkbox"/>
+					<input ng-model="expression2" type="checkbox"/>
+					<span ng-class="{bold: expression1, red: expression2}">√上checkbox看变化</span>
+				</div>
+				<h4>源码：</h4>
+			
+<pre class="w600 mt5 prettyprint linenums">
+&lt;span ng-class="{bold: expression1, red: expression2}">√上checkbox看变化&lt;/span>
+&lt;input ng-model="expression1" type="checkbox"/>
+&lt;input ng-model="expression2" type="checkbox"/>
+</pre>	
+			</div>
+			<!--例2 结束-->
+
+			<!--例3 开始-->
+			<div class="demo">
+				<div class="thum">例3：字符串(string) ng-class="string"</div>
+				<div class="code w600">
+					<input ng-model="expression3" type="input" placeholder="可以输入bold，red等"/>
+					<span ng-class="expression3">输入你想加的样式，样式里提供的有bold、red等</span>
+				</div>
+				<h4>源码：</h4>		
+<pre class="w600 mt5 prettyprint linenums">
+&lt;span ng-class="expression3">输入你想加的样式，样式里提供的有bold、red等</span>
+&lt;input ng-model="expression3" type="checkbox"/>
+</pre>	
+			</div>
+			<!--例3 结束-->
+
+			<!--例4 开始-->
+			<div class="demo">
+				<div class="thum">例4：字符串数组(Array) ng-class="[class1, class2]"</div>
+				<div class="code w600">
+					<input ng-model="expression4" type="input" placeholder="可以输入bold，red等"/>
+					<input ng-model="expression5" type="input" placeholder="可以输入bold，red等"/>
+					<span ng-class="[expression4, expression5]">输入你想加的样式，样式里提供的有bold、red等</span>
+				</div>
+				<h4>源码：</h4>		
+<pre class="w600 mt5 prettyprint linenums">
+&lt;span ng-class="[expression4, expression5]">输入你要加的样式，样式提供的有bold、red&lt;/span>
+&lt;input ng-model="expression4" type="input" placeholder="可以输入bold，red等"/>
+&lt;input ng-model="expression5" type="input" placeholder="可以输入bold，red等"/>
+</pre>	
+			</div>
+			<!--例4 结束-->
+		<!--属性例子结束-->
+	
+
+		</div>
+
+	</div>
+	<script type="text/javascript" src="../../base/js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="../../base/js/lib/prettify.js"></script>
+	<script type="text/javascript">
+		function Demo1Ctrl($scope){
+			$scope.color = true;
+			$scope.style = true;
+			$scope.style2 = {strike: true};
+			$scope.data = [{red: true}];
+		}
+	</script>
+</body>
+</html>

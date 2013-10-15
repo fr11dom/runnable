@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///Applications/MAMP/htdocs/runnable/dev/AngularJs/ngClass.html -->
+<html ng-app="" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}</style>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./ngClass-Angularjs_files/base.css">
+	<link rel="stylesheet" type="text/css" href="./ngClass-Angularjs_files/common.css">
+	<link rel="stylesheet" type="text/css" href="./ngClass-Angularjs_files/prettify.css">
+	<title>ngClass-Angularjs</title>
+</head>
+<body onload="prettyPrint()">
+	<div class="container">
+		<h1>ngClass</h1>
+		<ul>
+			<li>
+				<strong>作用：</strong>
+				<span>动态添加CSS类名。</span>
+			</li>
+			<li>
+				<strong>用法：</strong>
+				<span>1、作为属性(attribute);2、作为类名(class)。</span>
+			</li>
+		</ul>
+
+		<div class="mt5">
+			<p><strong>-------例子-------</strong></p>
+			<!--属性例子开始-->
+			<p class="mt5">作为属性：&lt;ANY ng-class="{expression}"&gt; &lt;ANY&gt;</p>
+
+			<!--例1 开始-->
+			<div class="mt5 ng-binding">
+				<div class="mb5">例1：映射语法ng-class="{class: expression}"</div>
+				<span ng-class="{bold: expression}" class="">√上checkbox看变化</span>
+				<input ng-model="expression" type="checkbox" class="ng-valid ng-dirty">expression=false
+<pre class="w600 mt5 prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"{bold: expression}"</span><span class="tag">&gt;</span><span class="pln">√上checkbox看变化</span><span class="tag">&lt;/span&gt;</span></li><li class="L1"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"expression"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="tag">/&gt;</span><span class="pln">expression={ {expression}}</span></li></ol></pre>
+			</div>		
+			<!--例1 结束-->
+
+			<!--例2 开始-->
+			<div class="mt5 ng-binding">
+				<div class="mb5">例2：映射语法ng-class="{class: expression,class2: expression2}"</div>
+				<span ng-class="{bold: expression1, red: expression2}" class="">√上checkbox看变化</span>
+				<input ng-model="expression1" type="checkbox" class="ng-valid ng-dirty">expression1=false
+				<input ng-model="expression2" type="checkbox" class="ng-valid ng-dirty">
+				expression2=false
+			</div>
+<pre class="w600 mt5 prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"{bold: expression1, red: expression2}"</span><span class="tag">&gt;</span><span class="pln">√上checkbox看变化</span></li><li class="L1"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"expression1"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="tag">/&gt;</span><span class="pln">expression1={ {expression1}}</span></li><li class="L2"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"expression2"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="tag">/&gt;</span><span class="pln">expression2={ {expression2}}</span></li></ol></pre>	
+			<!--例2 结束-->
+
+			<!--例3 开始-->
+			<div class="mt5 ng-binding">
+				<div class="mb5">例3：字符串ng-class="string"</div>
+				<span ng-class="expression3" class="">输入你想加的样式，样式里提供的有bold、red等</span>
+				<input ng-model="expression3" type="input" placeholder="可以输入bold，red等" class="ng-valid ng-dirty">expression3=
+			</div>
+<pre class="w600 mt5 prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"expression3"</span><span class="tag">&gt;</span><span class="pln">输入你想加的样式，样式里提供的有bold、red等</span></li><li class="L1"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"expression3"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="tag">/&gt;</span><span class="pln">expression3={ {expression3}}</span></li></ol></pre>	
+			<!--例3 结束-->
+		<!--属性例子结束-->
+
+
+		</div>
+
+	</div>
+	<script type="text/javascript" src="./ngClass-Angularjs_files/angular.min.js"></script>
+	<script type="text/javascript" src="./ngClass-Angularjs_files/prettify.js"></script>
+
+</body></html>

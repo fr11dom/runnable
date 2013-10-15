@@ -38,14 +38,5 @@
 
 /*****文本样式*****/
 .bold{font-weight:bold;}
-.red{color:#d14;}
-.green{color:green;}
-.blue{color:#0074cc;}
-.strike{text-decoration: line-through;}
+.red{color:red;}
 
-/****demo  区域****/
-.demo{margin:10px 0 5px 0;}
-.demo .thum{color:#0074cc;margin: 5px 0;}
-.demo .code{background:#eee;padding:8px;border-radius:3px;border:solid 1px #ddd;font-size:14px;box-shadow:inset 0 1px 1px #ddd}
-.demo h4{margin:5px 0;font-size:14px; font-weight:bold}
-.code p{line-height:20px}

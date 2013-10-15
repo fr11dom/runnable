@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../../base/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../base/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../base/css/prettify.css">
+	<title>ngClass-Angularjs</title>
+</head>
+<body onload="prettyPrint()">
+	<div class="container">
+
+	</div>
+	<script type="text/javascript" src="../../base/js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="../../base/js/lib/prettify.js"></script>
+	<script type="text/javascript">
+		function Demo1Ctrl($scope){
+			$scope.color = true;
+			$scope.style = true;
+			$scope.style2 = {strike: true};
+			$scope.data = [{red: true}];
+		}
+	</script>
+</body>
+</html>
