@@ -3,7 +3,7 @@
 **@iyutaoo@gmail.com
 */
 /*** reset css ***/
-div, h2, figure, p, ul, body {
+div, h2, figure, p, ul, body, ol, pre {
   padding: 0;
   margin: 0;
 }
@@ -37,7 +37,9 @@ ul {
 
 summary {
   cursor: pointer;
-  width: 100px;
+  width: 200px;
+  margin: 5px 0;
+  color: #c43c3c;
 }
 summary:focus {
   outline: none;
@@ -89,14 +91,41 @@ summary:focus {
   color: #333333;
   font-size: 16px;
 }
+#y-section article p a {
+  text-decoration: none;
+  border-bottom: solid 1px #999999;
+}
+#y-section article ol {
+  font-size: 14px;
+  margin: 5px 30px;
+}
+#y-section article pre {
+  font-size: 12px;
+  padding-top: 20px;
+  border-radius: 3px;
+  background: #fff;
+  width: 400px;
+}
+#y-section article .y-corre a {
+  font-size: 14px;
+}
 
 #y-footer {
   text-align: center;
   margin-top: 20px;
 }
 
-.y-avatar img {
+.y-avatar {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin-right: 5px;
+  float: left;
+}
+
+.y-about {
+  overflow: hidden;
+}
+.y-about p {
+  line-height: 1.8;
 }

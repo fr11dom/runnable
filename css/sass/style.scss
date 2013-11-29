@@ -10,6 +10,7 @@ $num14: 14px;
 $num16: 16px;
 $num20: 20px;
 
+
 @mixin font($size: 12px){
 	font-size: $size;
 }
@@ -18,6 +19,12 @@ $num20: 20px;
 }
 @mixin textDecor($line: none){
 	text-decoration: $line
+}
+@mixin bdbom($bColor: $grey9){
+	border-bottom: solid 1px $bColor;
+}
+@mixin textInt($indent){
+	text-indent: $indent;
 }
 $grey3: #333;
 $grey6: #666;
@@ -28,7 +35,7 @@ $mauto: 0 auto;
 
 
 /*** reset css ***/
-div,h2,figure,p,ul,body{
+div,h2,figure,p,ul,body,ol,pre{
 	padding: 0;
 	margin: 0;
 }
@@ -47,7 +54,7 @@ a{
 	&:hover { 
 		@include color(); 
 		@include textDecor();
-		border-bottom: solid 1px $grey9; 
+		@include bdbom(); 
 	}
 	&:active { 
 		@include color();  
@@ -59,7 +66,9 @@ ul{
 }
 summary{
 	cursor:pointer;
-	width:100px;
+	width: $num20 * 10;
+	margin: 5px 0;
+	@include color();
 	&:focus{
 		outline:none;
 	}
@@ -90,7 +99,7 @@ summary{
 	}
 	.active{
 		@include color(); 
-		border-bottom: solid 1px $grey9;
+		@include bdbom();
 	}
 }
 #y-section{
@@ -111,6 +120,26 @@ summary{
 			line-height: 1.8;
 			@include color($grey3); 
 			@include font($num16);
+			a{
+				@include textDecor(none);
+				@include bdbom();
+			}
+		}
+		ol{
+			@include font($num14);
+			margin:5px 30px;
+		}
+		pre{
+			@include font($num12);
+			padding-top:20px;
+			border-radius: 3px;
+			background: #fff;
+			width: $num20 * 20;
+		}
+		.y-corre{
+			a{
+				@include font($num14);
+			}
 		}
 	}
 }
@@ -121,11 +150,17 @@ summary{
 	margin-top: 20px;
 }
 .y-avatar{
-	img{
-		width:150px;
-		height:150px;
-		border-radius:50%;
-	}	
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	margin-right:5px;
+	float:left;
+}
+.y-about{
+	overflow:hidden;
+	p{
+		line-height: 1.8
+	}
 }
 
 

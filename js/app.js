@@ -13,6 +13,9 @@ yBlog.config(['$routeProvider', function($routeProvider){
       when('/detail/block-formatting-context', {
           templateUrl: 'views/block-formatting-context.html'
       }).
+      when('/detail/close-float', {
+          templateUrl: 'views/close-float.html'
+      }).
       when('/about', {
         templateUrl: 'views/about-me.html'
       }).
