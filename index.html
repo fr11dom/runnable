@@ -1,12 +1,40 @@
 <!doctype html>
-<html>
+<html ng-app="yBlog">
 <head>
 	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
 	<title>目录－代码片段</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<ul>
-		<li><a href="#">CSS3绘制三角形icon</a></li>
-	</ul>
+	<div id="y-doc">	
+		<header id="y-header">
+			<nav>
+				<a ng-repeat="item in nav" href="#/{{item.url}}" ng-class="{active: url == '/{{item.url}}'}">{{item.value}}</a>
+			</nav>
+		</header>
+		<section id="y-section">
+			<ng-view></ng-view>
+		</section>
+		
+		<!-- 
+		<footer id="y-footer">
+			<p>Powered by 茧单</p>
+			<p>©2013</p>
+		</footer> 
+		-->
+
+	</div>
+	<script src="js/lib/angular-1.2.2/angular.min.js"></script>
+	<script src="js/lib/angular-1.2.2/angular-resource.min.js"></script>
+	<script src="js/lib/angular-1.2.2/angular-route.min.js"></script>
+	<script src="js/lib/angular-1.2.2/angular-mocks.js"></script>
+	<script src="js/mock.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/aboutCtrl.js"></script>
+	<script src="js/controllers/runnableCtrl.js"></script>
+	<script src="js/services/http.js"></script>
+
 </body>
 </html>

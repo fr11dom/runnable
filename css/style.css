@@ -1,0 +1,102 @@
+/*
+**@style
+**@iyutaoo@gmail.com
+*/
+/*** reset css ***/
+div, h2, figure, p, ul, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f5f4f2;
+  font: normal 16px/1.5 "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
+  color: #666666;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+a:visited {
+  color: #83006f;
+  text-decoration: none;
+}
+a:hover {
+  color: #c43c3c;
+  text-decoration: none;
+  border-bottom: solid 1px #999999;
+}
+a:active {
+  color: #c43c3c;
+}
+
+ul {
+  list-style-type: square;
+}
+
+summary {
+  cursor: pointer;
+  width: 100px;
+}
+summary:focus {
+  outline: none;
+}
+
+/*** common style ***/
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+/*** main style ***/
+#y-doc {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#y-header {
+  margin: 20px 0;
+}
+#y-header a {
+  color: #666666;
+  font-size: 20px;
+  line-height: 180%;
+  margin-right: 10px;
+}
+#y-header .active {
+  color: #c43c3c;
+  border-bottom: solid 1px #999999;
+}
+
+#y-section .y-list li {
+  margin-left: 20px;
+}
+#y-section .y-list span {
+  font-size: 12px;
+}
+#y-section article header {
+  color: #c43c3c;
+  margin-bottom: 10px;
+}
+#y-section article p {
+  line-height: 1.8;
+  color: #333333;
+  font-size: 16px;
+}
+
+#y-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.y-avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

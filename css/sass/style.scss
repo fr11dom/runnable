@@ -1,0 +1,133 @@
+/*
+**@style
+**@iyutaoo@gmail.com
+*/
+
+
+//@css原子
+$num12: 12px;
+$num14: 14px;
+$num16: 16px;
+$num20: 20px;
+
+@mixin font($size: 12px){
+	font-size: $size;
+}
+@mixin color($color: #C43C3C){
+	color: $color;
+}
+@mixin textDecor($line: none){
+	text-decoration: $line
+}
+$grey3: #333;
+$grey6: #666;
+$grey9: #999;
+
+$mauto: 0 auto;
+
+
+
+/*** reset css ***/
+div,h2,figure,p,ul,body{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #f5f4f2;
+	font: normal 16px/1.5 "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
+	@include color($grey6);	
+}
+a{ 
+	@include color($grey3);
+	@include textDecor();
+	&:visited { 
+		@include color(#83006f);
+		@include textDecor();
+	}
+	&:hover { 
+		@include color(); 
+		@include textDecor();
+		border-bottom: solid 1px $grey9; 
+	}
+	&:active { 
+		@include color();  
+	}
+}
+
+ul{
+	list-style-type:square;
+}
+summary{
+	cursor:pointer;
+	width:100px;
+	&:focus{
+		outline:none;
+	}
+}
+/*** common style ***/
+.clearfix:after {
+	clear:both; 
+	content:' '; 
+	display:block; 
+	font-size:0; 
+	height:0;
+	line-height:0; 
+	visibility:hidden; 
+}
+
+/*** main style ***/
+#y-doc{
+	width: 960px;
+	margin: $mauto;
+}
+#y-header{
+	margin:	$num20 0;
+	a{
+		@include color($grey6);
+		@include font($num20);
+		line-height: 180%;
+		margin-right: 10px;
+	}
+	.active{
+		@include color(); 
+		border-bottom: solid 1px $grey9;
+	}
+}
+#y-section{
+	.y-list{
+		li{
+			margin-left:20px;
+		}
+		span{
+			@include font();
+		}
+	}
+	article{
+		header{
+			@include color();
+			margin-bottom:10px;
+		}
+		p{
+			line-height: 1.8;
+			@include color($grey3); 
+			@include font($num16);
+		}
+	}
+}
+
+
+#y-footer{
+	text-align: center;
+	margin-top: 20px;
+}
+.y-avatar{
+	img{
+		width:150px;
+		height:150px;
+		border-radius:50%;
+	}	
+}
+
+
+
+
