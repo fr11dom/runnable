@@ -5,16 +5,16 @@ yBlog.config(['$routeProvider', function($routeProvider){
   $routeProvider.
       when('/runnable', {
           controller: 'RunnableCtrl',
-          templateUrl: 'views/runnables.html'
+          templateUrl: 'views/runnable-list.html'
       }).
       when('/detail/css-pictxt', {
-          templateUrl: 'views/css-pictxt.html'
+          templateUrl: 'views/css/css-pictxt.html'
       }).
       when('/detail/block-formatting-context', {
-          templateUrl: 'views/block-formatting-context.html'
+          templateUrl: 'views/css/block-formatting-context.html'
       }).
       when('/detail/close-float', {
-          templateUrl: 'views/close-float.html'
+          templateUrl: 'views/css/close-float.html'
       }).
       when('/about', {
         templateUrl: 'views/about-me.html'
