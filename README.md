@@ -1,6 +1,6 @@
 runnable
 ========
-越写越像记事本了
+越写越像博客了
 ```
 "runnable": {
 	"index": "index.html",
