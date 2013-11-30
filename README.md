@@ -2,7 +2,7 @@ runnable
 ========
 越写越像记事本了
 ```
-runnable{
+"runnable": {
 	"index": "index.html",
 	"views":{
 		"list": "runnable-list.html",
