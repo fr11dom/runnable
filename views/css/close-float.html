@@ -1,0 +1,33 @@
+<article>
+	<header>再看闭合浮动</header>
+	<p>浮动对于布局来讲是个好东西，但是副作用也不少。比如浮动后父元素高度变0，低版本IE下bug等等。</p>
+	<p>记得刚开始用的最多的就是空白div办法，简单易懂可是一直觉得放个空div在这里简直太奇葩。</p>
+	<pre>
+ .clear{clear: both}
+ &lt;div>
+    &lt;div class="left">...&lt;/div>
+    &lt;div class="right">...&lt;/div>
+    &lt;div class="clear">&lt;/div>
+ &lt;/div>
+	</pre>
+	<p>然后网上找到另一种觉得不错的方法。拿来主义,没好好理解其实现原理。</p>
+    <pre>
+    .clearfix:after {
+	  content:"."; 
+	  display:block; 
+	  height:0; 
+	  visibility:hidden; 
+	  clear:both; 
+    }
+    .clearfix { *zoom:1; }
+    &lt;div class="clearfix">
+        &lt;div class="left">...&lt;/div>
+        &lt;div class="right">...&lt;/div>
+    &lt;/div>   
+    </pre>
+    <p>其实吧，也好理解，新的方法还是依靠clear:both来闭合浮动，其他代码都是为了隐藏生成的content而已，而*zoom则是直接触发IE的hasLayout来闭合浮动</p>
+    <p>相关文章：</p>
+    <p class="y-corre">
+    	<a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank">那些年我们一起清除过的浮动</a>
+    </p>
+</article>
