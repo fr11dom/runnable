@@ -1,37 +1,37 @@
 runnable
 ========
-越写越像博客了
+越写越像博客了，以下是其目录
 ```
-"runnable": {
-	"index": "index.html",
-	"views":{
-		"list": "runnable-list.html",
-		"about": "about-me.html",
-		"css相关":{
-			//bfc学习记录
-			"BFC": "BFC.html",
+runnable{
+	index.html
+	views{
+		runnable-list.html 		 
+		about-me.html
+		css相关{
+			//BFC学习记录
+			BFC.html 
 			//了解一种闭合浮动的原理
-			"cFloat": "close-float.html",
+			close-float.html 
 			//正确的实现图文混排
-			"cssPictxt": "css-pictxt.html"
-		}		
-	}
-	"css":{
-		"sass":{
-			"style": "style.scss"
+			css-pictxt.html
 		}
-		"style": "style.css"
 	}
-	"js":{
-		"app": "app.js", 	
-		"mockData": "mock.js",
-		"jslib": "lib", 
-		"controllers":{
-			"ctrl1": "runnableCtrl.js"
-			"ctrl2": "aboutCtrl.js"
+	css{
+		sass{
+			style.scss
 		}
-		"services":{
-			"httpSer": "http.js" 
+		style.css
+	}
+	js{
+		app.js 	
+		mock.js
+		lib 
+		controllers{
+			runnableCtrl.js
+			aboutCtrl.js
+		}
+		services{
+			http.js 
 		}
     }
 
