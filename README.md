@@ -5,11 +5,15 @@ runnable
 runnable{
 	index.html
 	views{
-		runnables.html //a list
-		BFC.html //learn block formatting context
-		close-float.html //learn close float
-		css-pictxt.html //a FE written test pictxt
-		about-me.html //about
+		//list
+		runnables.html 
+		//BFC学习记录
+		BFC.html 
+		//了解一种闭合浮动的原理
+		close-float.html 
+		//正确的实现图文混排
+		css-pictxt.html 
+		about-me.html
 	}
 	css{
 		sass{
@@ -18,9 +22,9 @@ runnable{
 		style.css
 	}
 	js{
-		app.js 		
-		mock.js //mock data
-		lib //some lib e.g angularjs
+		app.js 	
+		mock.js
+		lib 
 		controllers{
 			runnableCtrl.js
 			aboutCtrl.js
