@@ -10,7 +10,7 @@
 <body>
 	<div id="y-doc">	
 		<header id="y-header">
-			<nav>
+			<nav ng-cloak>
 				<a ng-repeat="item in nav" href="#/{{item.url}}" ng-class="{active: url == '/{{item.url}}'}">{{item.value}}</a>
 			</nav>
 		</header>
